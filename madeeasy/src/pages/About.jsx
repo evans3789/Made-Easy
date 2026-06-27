@@ -125,7 +125,7 @@ export default function About() {
                 </div>
                 <div className={styles.quickFacts}>
                   {[
-                    { label: 'Location', value: 'Nairobi, KE &#127472;&#127466;' },
+                    { label: 'Location', value: 'Nairobi, Kenya' },
                     { label: 'Experience', value: '7+ Years' },
                     { label: 'Availability', value: 'Open to Projects' },
                     { label: 'Response Time', value: '< 24 hours' },
