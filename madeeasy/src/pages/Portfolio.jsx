@@ -183,8 +183,8 @@ function ProjectModal({ project, onClose }) {
             </div>
 
             <div style={{ display: 'flex', gap: 12 }}>
-              <a href={project.link} className="btn btn-primary">View Live Site</a>
-              <a href={project.link} className="btn btn-outline">Case Study</a>
+              <a href={project.link} className="btn btn-primary" target='_blank'>View Live Site</a>
+              <a href={project.link} className="btn btn-outline" target='_blank'>Case Study</a>
             </div>
           </div>
         </motion.div>
