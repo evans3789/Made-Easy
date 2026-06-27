@@ -1,0 +1,161 @@
+.filterBar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(59,130,246,0.08);
+}
+
+.filterBtn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(59,130,246,0.15);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.87rem;
+  font-weight: 500;
+  cursor: none;
+  transition: all 0.22s;
+  white-space: nowrap;
+}
+.filterBtn:hover {
+  border-color: rgba(59,130,246,0.4);
+  color: var(--text-secondary);
+  background: rgba(59,130,246,0.06);
+}
+.filterBtnActive {
+  background: rgba(59,130,246,0.15);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  box-shadow: 0 0 12px rgba(59,130,246,0.2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: none;
+  transition: box-shadow 0.3s;
+  border: 1px solid rgba(59,130,246,0.1);
+}
+.card:hover {
+  box-shadow: 0 0 0 1px var(--card-color, #3B82F6), 0 12px 40px rgba(0,0,0,0.4), 0 0 30px rgba(59,130,246,0.1);
+}
+
+.cardThumb {
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbDots {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+  z-index: 1;
+}
+
+.thumbGlow {
+  position: absolute;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  opacity: 0.12;
+  filter: blur(24px);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,15,31,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+  backdrop-filter: blur(4px);
+}
+.card:hover .cardOverlay { opacity: 1; }
+
+.cardBody { padding: 20px; }
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 40px rgba(59,130,246,0.1);
+}
+.modal::-webkit-scrollbar { width: 4px; }
+.modal::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.3); border-radius: 2px; }
+
+.modalClose {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-secondary);
+  cursor: none;
+  z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.modalClose:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+.modalThumb {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalThumbContent {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 14px;
+}
+
+.modalBody { padding: 28px 32px 32px; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr; }
+  .modalBody { padding: 20px; }
+  .filterBtn { padding: 6px 14px; font-size: 0.82rem; }
+}

@@ -1,0 +1,244 @@
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 60px;
+}
+
+.serviceCard {
+  padding: 32px 28px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  cursor: none;
+  transition: all 0.3s;
+  border: 1px solid rgba(59,130,246,0.1);
+}
+.serviceCard:hover {
+  border-color: var(--svc-color, #3B82F6);
+  box-shadow: 0 0 30px rgba(59,130,246,0.1), 0 16px 40px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+}
+
+.serviceTop { display: flex; flex-direction: column; gap: 14px; }
+
+.serviceIcon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+
+.serviceTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.serviceDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(59,130,246,0.08);
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 0.87rem;
+}
+
+.checkIcon {
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Pricing */
+.billingToggle {
+  display: inline-flex;
+  background: rgba(17,24,39,0.8);
+  border: 1px solid rgba(59,130,246,0.15);
+  border-radius: 12px;
+  padding: 5px;
+  gap: 4px;
+  margin-top: 28px;
+}
+
+.toggleBtn {
+  padding: 10px 22px;
+  border-radius: 9px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: none;
+  transition: all 0.25s;
+}
+.toggleBtnActive {
+  background: var(--accent-blue);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(59,130,246,0.4);
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.pricingCard {
+  padding: 32px 28px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  border: 1px solid;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 480px;
+}
+.pricingCard:hover { transform: translateY(-4px); }
+
+.pricingCardPopular {
+  box-shadow: 0 0 40px rgba(59,130,246,0.15);
+  transform: scale(1.02);
+}
+.pricingCardPopular:hover { transform: scale(1.02) translateY(-4px); }
+
+.popularBadge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  font-family: 'Space Grotesk', sans-serif;
+  box-shadow: 0 0 16px rgba(0,0,0,0.3);
+}
+
+.pricingHeader { display: flex; flex-direction: column; gap: 4px; }
+
+.pkgName {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.pkgPrice {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.pkgPeriod {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pkgDesc {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(59,130,246,0.08);
+}
+
+.pkgFeatures {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.pkgFeature {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* Process */
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.processCard {
+  padding: 28px 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: none;
+  transition: all 0.3s;
+}
+.processCard:hover { transform: translateY(-4px); }
+
+.processNum {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3B82F6, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.processTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.processDesc {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .servicesGrid { grid-template-columns: repeat(2,1fr); }
+  .pricingGrid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .pricingCardPopular { transform: none; }
+  .processGrid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 640px) {
+  .servicesGrid { grid-template-columns: 1fr; }
+  .processGrid { grid-template-columns: 1fr; }
+  .billingToggle { flex-direction: column; }
+}

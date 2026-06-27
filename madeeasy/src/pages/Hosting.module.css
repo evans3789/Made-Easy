@@ -1,0 +1,253 @@
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Server Visual */
+.serverVisual { display: flex; justify-content: center; }
+
+.serverCard {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(59,130,246,0.08);
+  animation: float 5s ease-in-out infinite;
+}
+
+.serverHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(59,130,246,0.05);
+  border-bottom: 1px solid rgba(59,130,246,0.1);
+}
+
+.serverRows {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.serverRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.serverRow:hover { background: rgba(59,130,246,0.05); }
+
+.serverPulse {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(52,211,153,0.05);
+  border-top: 1px solid rgba(52,211,153,0.1);
+}
+
+.pulseRing {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(52,211,153,0.5);
+  animation: pulse-ring 1.8s ease-out infinite;
+  flex-shrink: 0;
+}
+
+.pulseDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #34D399;
+  margin-left: -11px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px #34D399;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Trust */
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.trustCard {
+  padding: 28px 24px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: none;
+  transition: transform 0.3s;
+}
+.trustCard:hover { transform: translateY(-4px); }
+
+.trustStat {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.trustLabel {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.trustDesc {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* Features */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.featureCard {
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  cursor: none;
+}
+
+.featureIcon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+
+.featureTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.featureDesc {
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+/* Security */
+.securityGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.securityList {
+  padding: 28px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.securityItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(59,130,246,0.06);
+}
+.securityItem:last-child { border-bottom: none; }
+
+.secCheck {
+  color: #34D399;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Plans */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.planCard {
+  padding: 32px 28px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  border: 1px solid;
+  transition: transform 0.3s;
+}
+.planCard:hover { transform: translateY(-4px); }
+
+.planCardPopular {
+  box-shadow: 0 0 40px rgba(59,130,246,0.12);
+}
+
+.popularTag {
+  position: absolute;
+  top: -13px; left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.planHeader { display: flex; flex-direction: column; gap: 6px; }
+
+.planName {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.planPrice {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.planFeatures { list-style: none; flex: 1; }
+
+@media (max-width: 1024px) {
+  .heroGrid { grid-template-columns: 1fr; gap: 40px; }
+  .trustGrid { grid-template-columns: repeat(2, 1fr); }
+  .featuresGrid { grid-template-columns: repeat(2, 1fr); }
+  .securityGrid { grid-template-columns: 1fr; gap: 40px; }
+  .plansGrid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+}
+
+@media (max-width: 600px) {
+  .trustGrid { grid-template-columns: 1fr 1fr; }
+  .featuresGrid { grid-template-columns: 1fr; }
+}

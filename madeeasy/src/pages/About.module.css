@@ -1,0 +1,261 @@
+.bioGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.bigName { line-height: 1.1; }
+
+.bioRight { display: flex; justify-content: center; }
+
+.avatarCard {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  max-width: 360px;
+  backdrop-filter: blur(20px);
+}
+
+.avatarVisual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+}
+
+.avatarInner {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(0,212,255,0.1));
+  border: 2px solid rgba(59,130,246,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.avatarRing1 {
+  position: absolute;
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  border: 1px solid rgba(59,130,246,0.2);
+  animation: spin 12s linear infinite;
+}
+
+.avatarRing2 {
+  position: absolute;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0,212,255,0.15);
+  animation: spin 20s linear infinite reverse;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.quickFacts { display: flex; flex-direction: column; gap: 12px; }
+
+.factRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(59,130,246,0.07);
+}
+.factRow:last-child { border-bottom: none; }
+
+.factLabel {
+  color: var(--text-muted);
+  font-size: 0.83rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.factValue {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* Skills */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 48px;
+  margin-top: 40px;
+}
+
+.skillRow { display: flex; flex-direction: column; gap: 8px; }
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillBar {
+  height: 6px;
+  background: rgba(59,130,246,0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+  border-radius: 3px;
+  position: relative;
+}
+.skillFill::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: inherit;
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 24px;
+  position: relative;
+}
+
+.timelineLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.timelineDot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineConnector {
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(59,130,246,0.3), rgba(59,130,246,0.05));
+  margin-top: 8px;
+  min-height: 40px;
+}
+
+.timelineCard {
+  padding: 24px 28px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timelineYear {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timelineTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.timelineCompany {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.timelineDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-top: 4px;
+}
+
+/* Tech Stack */
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.techItem {
+  padding: 20px 16px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  cursor: none;
+}
+
+/* Values */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.valueCard {
+  padding: 28px 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: none;
+}
+
+.valueIcon {
+  font-size: 1.8rem;
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(59,130,246,0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(59,130,246,0.15);
+}
+
+@media (max-width: 1024px) {
+  .techGrid { grid-template-columns: repeat(4, 1fr); }
+  .valuesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .bioGrid { grid-template-columns: 1fr; gap: 40px; }
+  .skillsGrid { grid-template-columns: 1fr; }
+  .techGrid { grid-template-columns: repeat(3, 1fr); }
+  .valuesGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .techGrid { grid-template-columns: repeat(2, 1fr); }
+  .timelineItem { grid-template-columns: 32px 1fr; gap: 16px; }
+}
