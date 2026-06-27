@@ -125,8 +125,8 @@ export default function About() {
                 </div>
                 <div className={styles.quickFacts}>
                   {[
-                    { label: 'Location', value: 'London, UK 🇬🇧' },
-                    { label: 'Experience', value: '5+ Years' },
+                    { label: 'Location', value: 'Nairobi, KE KE' },
+                    { label: 'Experience', value: '7+ Years' },
                     { label: 'Availability', value: 'Open to Projects' },
                     { label: 'Response Time', value: '< 24 hours' },
                   ].map(f => (
