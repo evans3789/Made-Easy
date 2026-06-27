@@ -23,7 +23,7 @@ const projects = [
     tech: ['Next.js', 'GSAP', 'Prismic', 'Tailwind', 'Vercel'],
     color: '#00D4FF',
     year: '2024',
-    link: '#',
+    link: 'https://luminasource.onrender.com/',
     metrics: ['340% Lead Growth', 'Awwwards HM', '0.8s Load'],
   },
   {
