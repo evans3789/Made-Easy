@@ -26,12 +26,12 @@ const securityFeatures = [
 const maintenancePlans = [
   {
     name: 'Essentials',
-    price: '£250',
-    period: '/month',
+    price: '$30',
+    period: '/Year',
     color: '#3B82F6',
     features: [
       'CMS & plugin updates',
-      '2 content changes/month',
+      '10 content changes/year',
       'Monthly uptime report',
       'SSL monitoring',
       'Email support (48hr)',
@@ -39,8 +39,8 @@ const maintenancePlans = [
   },
   {
     name: 'Professional',
-    price: '£550',
-    period: '/month',
+    price: '$60',
+    period: '/Year',
     color: '#00D4FF',
     popular: true,
     features: [
@@ -54,8 +54,8 @@ const maintenancePlans = [
   },
   {
     name: 'Elite',
-    price: '£1,200',
-    period: '/month',
+    price: '$120',
+    period: '/Year',
     color: '#818CF8',
     features: [
       'Everything in Professional',
