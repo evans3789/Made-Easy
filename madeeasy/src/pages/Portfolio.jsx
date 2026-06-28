@@ -13,7 +13,7 @@ const projects = [
     tech: ['React', 'Node.js', 'PostgreSQL', 'Chart.js', 'Redis'],
     color: '#3B82F6',
     year: '2024',
-    link: '#',
+    link: 'https://nexapay-gqkr.onrender.com/',
     metrics: ['50k+ Users', '99.9% Uptime', '< 200ms API'],
   },
   {
